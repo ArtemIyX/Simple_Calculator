@@ -5,6 +5,7 @@
 
 int main()
 {
+	setlocale(LC_ALL, "rus");
 	string str;
 	vector<SimpleCalculator::s_element> v;
 	getline(cin, str);

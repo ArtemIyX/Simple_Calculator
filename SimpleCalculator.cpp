@@ -231,6 +231,8 @@ void SimpleCalculator::calcSome(vector<s_element>& v)
 								throw exception("На месте числа в строке не было чисел");
 							}
 							v[i].type = e_type::number;
+							if (b == 0)
+								throw exception("Деление на ноль");
 							v[i].str = to_string(a / b);
 							v[i - 1].type = e_type::toRemove;
 							v[i + 1].type = e_type::toRemove;
